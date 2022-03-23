@@ -2,7 +2,7 @@ import requests
 
 # Test_01. Добавление папки на Яндекс Диск. Метод Put
 
-token = 'AQAAAABevsvRAADLW3vfon47DkCLi2tqFwuOTWc'
+token = 'TOKEN'
 url = 'https://cloud-api.yandex.net/v1/disk/resources'
 headers = {'Content-Type': 'application/json', 'Authorization': 'OAuth {}'.format(token)}
 params = {"path": 'Test05_23_03_2022', "overwrite": "true"}
