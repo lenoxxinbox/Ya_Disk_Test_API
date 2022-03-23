@@ -39,10 +39,7 @@ class YaDiskFolders:
 
 
 def main():
-    test_api = YaDiskFolders('https://cloud-api.yandex.net/v1/disk/resources',
-                             {'Content-Type': 'application/json',
-                              'Authorization': 'OAuth AQAAAABevsvRAADLW3vfon47DkCLi2tqFwuOTWc'},
-                             {"path": 'Test07_23_03_2022', "overwrite": "true"})
+    test_api = YaDiskFolders(url, headers, params)
 
     test_api.test_append_folder()
     test_api.test_delete_folder()
