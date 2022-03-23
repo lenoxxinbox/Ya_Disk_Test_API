@@ -9,9 +9,10 @@ params = {"path": 'Test05_23_03_2022', "overwrite": "true"}
 response = requests.put(url, headers=headers, params=params)
 print(f'Status Code = {response.status_code}')
 if response.status_code == 201:
-       print(f'{params["path"]} download successful. Test is pass')
+       print(f'{params["path"]} adding successful. Test is pass')
 else:
-       print('Test is fail')
+       print(f'Adding {params["path"]} Test_01 is fail')
+       exit(2)
 
 # Test_02. Удаление папки на Яндекс Диск. Метод Delete
 
@@ -21,6 +22,8 @@ params = {"path": 'Test05_23_03_2022', "overwrite": "true"}
 response = requests.delete(url, headers=headers, params=params)
 print(f'Status Code = {response.status_code}')
 if response.status_code == 204:
-       print(f'{params["path"]} download successful. Test is pass')
+       print(f'{params["path"]} deleted successful. Test is pass')
 else:
-       print('Test is fail')
+       print(f'Deleted {params["path"]} Test_02 is fail')
+       exit(2)
+
